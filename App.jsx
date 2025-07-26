@@ -1,19 +1,16 @@
-import Header from "./Header"
-import Todo from "./Todo"
+//import Header from "./Header"
+import AddTodo from "./AddTodo"
  
   
-  function App() {
-  //variable
-  const name="Jesika Sobnam"
+function App() {
+function onSubmitTodo(object) {
+  console.log("This is app component",object);
+}
   return (
     <>
-   <h1>Todo for {name}</h1>
- <Header/>
-   <ul>
-    <li><Todo/></li>
-    <li><Todo/> </li>
-    <li><Todo/> </li>
-   </ul>
+   <div>
+    <AddTodo onSubmitTodo={onSubmitTodo}/>
+   </div>
    </>
   )
 }
